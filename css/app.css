@@ -1,0 +1,16 @@
+footer .text-gray-800 {
+    color: #332E20;
+}
+footer .text-gray-500 {
+    color: #332E20;
+}
+footer .text-gray-800:hover {
+    color: #FF5200;
+}
+footer .text-gray-500:hover {
+    color: #FF5200;
+}
+.text-pink-500 {
+    color: #FF5200;
+}
+
