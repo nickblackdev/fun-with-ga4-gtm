@@ -114,17 +114,16 @@
     </div>
     <section class="bg-white border-b py-8">
       <div class="container max-w-5xl mx-auto m-8 flex justify-center align-center">
-        <form
-            action="https://formspree.io/f/xaykakbp"
-            method="POST"
-        >
-            <label class="form-input-label">
-                Enter Your Email:
-                <input type="email" name="email" class="form-input">
-            </label>
-            <!-- your other form fields go here -->
-            <button class=" form-submit-btn main-cta nav-cta mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out" type="submit">Send</button>
-        </form>
+
+        <form id="my-form" action="https://formspree.io/f/xaykakbp" method="POST">
+            <label>Email:</label>
+            <input type="email" name="email" />
+            <label>Message:</label>
+            <input type="text" name="message" />
+            <button id="my-form-button" class="form-submit-btn main-cta nav-cta mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">Submit</button>
+            <p id="my-form-status"></p>
+        </form> 
+
       </div>
     </section>
     <!--Footer-->
@@ -188,7 +187,7 @@
       </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
  
     <script>
       var scrollpos = window.scrollY;
@@ -273,15 +272,35 @@
     </script>
 
     <script>
-        $.ajax({
-            url: "https://formspree.io/f/xaykakbp",
-            method: "POST",
-            dataType: "json",
-            data: {
-                email: "nick@nickblack.io",
-                message: "Hello!"
+        var form = document.getElementById("my-form");
+        async function handleSubmit(event) {
+        event.preventDefault();
+        var status = document.getElementById("my-form-status");
+        var data = new FormData(event.target);
+        fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+        }).then(response => {
+        if (response.ok) {
+            status.innerHTML = "Thanks for your submission!";
+            form.reset()
+        } else {
+            response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+            status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+            } else {
+            status.innerHTML = "Oops! There was a problem submitting your form"
             }
+        })
+        }
+        }).catch(error => {
+        status.innerHTML = "Oops! There was a problem submitting your form"
         });
+        }
+        form.addEventListener("submit", handleSubmit)
     </script>
   </body>
 </html>
