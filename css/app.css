@@ -16,5 +16,17 @@ footer .text-gray-500:hover {
 
 .form-input {
     border: 1px solid #000;
+    width: 100%;
+    padding: 8px;
+}
+
+#my-form-status {
+    text-align: center;
+    color: #000;
+    font-size: 36px;
+    padding: 30px;
+}
+.thank-you-message {
+
 }
 
