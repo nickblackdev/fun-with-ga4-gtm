@@ -13,13 +13,17 @@ footer .text-gray-500:hover {
 .text-pink-500 {
     color: #FF5200;
 }
-
+/** Form Styles **/
 .form-input {
     border: 1px solid #000;
+    color: #000;
     width: 100%;
     padding: 8px;
 }
-
+.form-label {
+    color: #000;
+    font-size: 22px;
+}
 #my-form-status {
     text-align: center;
     color: #000;
