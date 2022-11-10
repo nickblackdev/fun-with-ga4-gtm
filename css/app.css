@@ -14,4 +14,7 @@ footer .text-gray-500:hover {
     color: #FF5200;
 }
 
+.form-input {
+    border: 1px solid #000;
+}
 
