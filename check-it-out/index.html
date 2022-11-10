@@ -113,7 +113,7 @@
       </svg>
     </div>
     <section class="bg-white border-b py-8">
-      <div class="container max-w-5xl mx-auto m-8">
+      <div class="container max-w-5xl mx-auto m-8 flex justify-center align-center">
         <form
             action="https://formspree.io/f/xaykakbp"
             method="POST"
@@ -187,9 +187,9 @@
         </div>
       </div>
     </footer>
-    <!-- jQuery if you need it
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ 
     <script>
       var scrollpos = window.scrollY;
       var header = document.getElementById("header");
@@ -270,6 +270,18 @@
         }
         return false;
       }
+    </script>
+
+    <script>
+        $.ajax({
+            url: "https://formspree.io/f/xaykakbp",
+            method: "POST",
+            dataType: "json",
+            data: {
+                email: "nick@nickblack.io",
+                message: "Hello!"
+            }
+        });
     </script>
   </body>
 </html>
