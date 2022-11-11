@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>
-      Check It Out
+      GA4 Reporting
     </title>
     <meta name="description" content="Simple landind page" />
     <meta name="keywords" content="" />
@@ -81,8 +81,11 @@
         <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
           <p class="uppercase tracking-loose w-full">Lunch & Learn</p>
           <h1 class="my-4 text-5xl font-bold leading-tight">
-            GA4 & GTM Overview
+            Check It Out!
           </h1>
+          <p class="leading-normal text-2xl mb-8">
+            Fill out the form below to register.
+          </p>
         </div>
         <!--Right Col-->
         <div class="w-full md:w-3/5 py-6 text-center">
@@ -110,53 +113,15 @@
       </svg>
     </div>
     <section class="bg-white border-b py-8">
-      <div class="container px-5 mx-auto flex flex-wrap justify-center pt-4 pb-12">
-        <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-          Introduction
-        </h2>
-        <div class="w-full mb-4">
-          <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
-        </div>
-        <div class="slim-content">
-          <p>Today I’ll be going over the new Google analytics 4 tag and custom tagging with google tag manager.</p>
-          <p>I’ll stick with the more technical side of installing and set up at first. Then we’ll get into the analytics reporting and go over some upgrades and changes with the GA4 dashboard.</p>
-        </div>
-      </div>
-    </section>
-    <section class="bg-white border-b py-8">
-      <div class="container px-5 mx-auto flex flex-wrap justify-center pt-4 pb-12">
-        <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-          What is GA4 & GTM?
-        </h2>
-        <div class="w-full mb-4">
-          <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
-        </div>
-        <div class="slim-content">
-          <p>
-            You'll be hearing GA4 and GTM a lot during this presentation so I'll start with explaining what these are in case anyone has never heard these terms.
-          </p>
-          <p>
-            <strong>GA4</strong> is the new Google Analytics property. Google will be sunsetting the previous Universal Analytics property on July 23, 2023. This conversion to the GA4 tag is necessary because Universal Analytics will stop collecting data on that date on will only store existing for a few months. The new analytics is a entirely different dashboard and property in the Google Analytics account.
-          </p>
-          <p>
-            <strong>GTM</strong> is the Google Tag Manager. This Google product has the ability to create custom tags for tracking custom metrics that GA doesn't track by default. The new GA4 tag has a lot more built in events but sometimes custom tags are necessary to track things like individual button clicks, specific link clicks and form submissions.
-          </p>
-        </div>
-      </div>
-    </section>
-    <section class="bg-white border-b py-8">
-      <div class="container px-5 mx-auto flex flex-wrap justify-center pt-4 pb-12">
-        <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-          Enhancements
-        </h2>
-        <div class="w-full mb-4">
-          <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
-        </div>
-        <div class="slim-content">
-          <p>
-            Google Analytics 4 is bringing a new, forward thinking approach to collecting data. User privacy is increasingly important, and tracking user behavior accross the web has become a chjallenge for digital marketers and website owners. That is why GA4 was made with the intent to simplify reporting. GA4 reporting uses advanced machine learning to create a single user story that can be interpreted by digital markets and website owners alike. The platform includes and easy-to-read dashboard, pre-built reports and custom reporting capabilities so you can view the data you care about the most.
-          </p>
-        </div>
+      <div class="container max-w-5xl mx-auto m-8 flex justify-center align-center">
+
+        <form id="my-form" action="https://formspree.io/f/xaykakbp" method="POST">
+            <label class="form-label">Email:</label>
+            <input type="email" name="email" class="form-input" />
+            <button id="my-form-button" class="form-submit-btn mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">Submit</button>
+            <p id="my-form-status"></p>
+        </form> 
+
       </div>
     </section>
     <!--Footer-->

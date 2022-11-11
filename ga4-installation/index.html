@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>
-      Check It Out
+      GA4 Installation Via GTM
     </title>
     <meta name="description" content="Simple landind page" />
     <meta name="keywords" content="" />
@@ -81,7 +81,7 @@
         <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
           <p class="uppercase tracking-loose w-full">Lunch & Learn</p>
           <h1 class="my-4 text-5xl font-bold leading-tight">
-            GA4 & GTM Overview
+            GA4 Installation Via GTM
           </h1>
         </div>
         <!--Right Col-->
@@ -112,50 +112,75 @@
     <section class="bg-white border-b py-8">
       <div class="container px-5 mx-auto flex flex-wrap justify-center pt-4 pb-12">
         <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-          Introduction
+          Why Install GA Via GTM?
         </h2>
         <div class="w-full mb-4">
           <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
         </div>
         <div class="slim-content">
-          <p>Today I’ll be going over the new Google analytics 4 tag and custom tagging with google tag manager.</p>
-          <p>I’ll stick with the more technical side of installing and set up at first. Then we’ll get into the analytics reporting and go over some upgrades and changes with the GA4 dashboard.</p>
+          <p>
+            Google Analytics has its own code snippet to install directly to a website or app but it's recommended by Google to install using a tag in the Google Tag Manager.
+          </p>
+          <p>
+            GTM should act as the hub of all of the Google Products. Installing GTM only and then creating custom tags in GTM for other Google services like GA4, Google Ads, Working with the Facebook Conversion API, etc.
+          </p>
+          <img class="w-full mt-10 mb-10" src="../img/gtm-overview.png" alt="Illustration showing GTM as the hub for marketing tools" />
+          <p>
+            When Tag Manager is installed on your website, you can safely and easily deploy analytics and measurement tag configurations from a web-based user interface.
+          </p>
+          <p>
+            Some common tracking use cases for GTM are:
+          </p>
+          <ul class="mb-10">
+            <li>CTA button clicks</li>
+            <li>Form submissions</li>
+            <li>When a particular element appears on the screen</li>
+            <li>When a visitor stays on a page for more than X seconds</li>
+            <li>Track sales, conversions, grow remarketing lists</li>
+          </ul>
+          <p>
+            GTM is the only analytics tool that needs to be manually installed on the website and all other tools are controlled directly through the GTM admin web-based user interface.
+          </p>
         </div>
       </div>
     </section>
     <section class="bg-white border-b py-8">
       <div class="container px-5 mx-auto flex flex-wrap justify-center pt-4 pb-12">
         <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-          What is GA4 & GTM?
+          How To Install GTM
         </h2>
         <div class="w-full mb-4">
           <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
         </div>
         <div class="slim-content">
-          <p>
-            You'll be hearing GA4 and GTM a lot during this presentation so I'll start with explaining what these are in case anyone has never heard these terms.
-          </p>
-          <p>
-            <strong>GA4</strong> is the new Google Analytics property. Google will be sunsetting the previous Universal Analytics property on July 23, 2023. This conversion to the GA4 tag is necessary because Universal Analytics will stop collecting data on that date on will only store existing for a few months. The new analytics is a entirely different dashboard and property in the Google Analytics account.
-          </p>
-          <p>
-            <strong>GTM</strong> is the Google Tag Manager. This Google product has the ability to create custom tags for tracking custom metrics that GA doesn't track by default. The new GA4 tag has a lot more built in events but sometimes custom tags are necessary to track things like individual button clicks, specific link clicks and form submissions.
-          </p>
+          <p>Before we add any tags, we'll need ot install the GTM code to our website. When you create a new tag manager property it will generate a couple of installation code snippets. This can always be found in the admin section of the dashboard.</p>
+          <p>The GTM code snippet has two parts, one code block that should be added to the HEAD of the website and another optional fallback code that goes immediately after the opening BODY tag.</p>
+          <p>This code should be added to every page of the website.</p>
+          <img class="w-full mb-10" src="../img/gtm-code.png" alt="Screenshot of GTM Installation Code" />
         </div>
       </div>
     </section>
     <section class="bg-white border-b py-8">
       <div class="container px-5 mx-auto flex flex-wrap justify-center pt-4 pb-12">
         <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-          Enhancements
+          How To Install GA4 Via GTM
         </h2>
         <div class="w-full mb-4">
           <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
         </div>
         <div class="slim-content">
-          <p>
-            Google Analytics 4 is bringing a new, forward thinking approach to collecting data. User privacy is increasingly important, and tracking user behavior accross the web has become a chjallenge for digital marketers and website owners. That is why GA4 was made with the intent to simplify reporting. GA4 reporting uses advanced machine learning to create a single user story that can be interpreted by digital markets and website owners alike. The platform includes and easy-to-read dashboard, pre-built reports and custom reporting capabilities so you can view the data you care about the most.
-          </p>
+          <p>Now that Google Tag Manager is installed we can handle all of the other custom tag and installations through the GTM Dashboard</p>
+          <p>To create the GA4 tag go to the Workspace Section of the dahboard and click Add a New Tag.</p>
+          <img class="w-full mb-10" src="../img/gtm-new-tag.png" alt="Screenshot of GTM Installation Code" />
+        
+          <p>Enter in a title for the tag that makes it clear to recognize. Over time it’s easy to accumulate a lot of tags; a clear and consistent naming convention is very useful to stay organized. Folders are also available in the workspace view.</p>
+          <p>Next, click on tag configuration and select the built-in tag type for “Google Analytics 4”</p>
+          <p>This will bring up an option to add in the data stream ID that you can get from the GA4 account in the admin section under data streams.</p>
+          <p>Next you can select the Trigger type. This will be a built in type for all pages. Select all pages and save to go back.</p>
+          <p>Save out rest of the tag and it will be ready to preview.</p>
+          <p>To preview to make sure it's firing before you publish the container, go tthe the workspace section and click on the big blue preview button located at the top right area of the view.</p>
+          <p>This will bring up a new window where you can add the url of the site you're working on. After this is set, click connect and another tab with the website will open. On this page you can open up the lower debug panel and click through each page is firing the GA4 tag.</p>
+          <p>When all is good, close out of the preview windows and click the publish button located nest to the preview button.</p>
         </div>
       </div>
     </section>

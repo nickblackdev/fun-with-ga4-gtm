@@ -33,4 +33,22 @@ footer .text-gray-500:hover {
 .thank-you-message {
 
 }
-
+/** Body Copy Sections **/
+.slim-content {
+    max-width: 750px;
+}
+.slim-content p {
+    color: #000;
+    padding-bottom: 15px;
+}
+/** List Styles **/
+.slim-content ul {
+    list-style-type: disc;
+    padding-left: 35px;
+}
+.slim-content ul li {
+    color: #000;
+}
+.slim-content a {
+        color: #FF5200;l
+}

@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>
-      Check It Out
+      GTM Dashboard
     </title>
     <meta name="description" content="Simple landind page" />
     <meta name="keywords" content="" />
@@ -81,7 +81,7 @@
         <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
           <p class="uppercase tracking-loose w-full">Lunch & Learn</p>
           <h1 class="my-4 text-5xl font-bold leading-tight">
-            GA4 & GTM Overview
+            GTM Dashboard
           </h1>
         </div>
         <!--Right Col-->
@@ -109,116 +109,126 @@
         </g>
       </svg>
     </div>
-    <section class="bg-white border-b py-8">
-      <div class="container px-5 mx-auto flex flex-wrap justify-center pt-4 pb-12">
-        <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-          Introduction
-        </h2>
-        <div class="w-full mb-4">
-          <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+  </section>
+  <section class="bg-white border-b py-8">
+    <div class="container px-5 mx-auto flex flex-wrap justify-center pt-4 pb-12">
+      <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+        GTM Dashboard
+      </h2>
+      <div class="w-full mb-4">
+        <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+      </div>
+      <div class="slim-content">
+        <p>
+          To login to the admin, follow this link,  <a href="https://tagmanager.google.com/" target="_blank">https://tagmanager.google.com/</a>, and use the credentials for your Google Account.
+        </p>
+        <p>This admin is made up of three areas:</p>
+        <p>
+          <strong>Workspace:</strong> all tags, triggers and variables are created and managed here.
+        </p>
+        <img class="w-full mt-10 mb-10" src="../img/gtm-dashboard.png" alt="Screenshot of GTM Dashboard" />
+        
+        <p>
+          <strong>Versions:</strong> all versions of the published container are listed out here. This makes it easy to roll back to an older version if needed.
+        </p>
+        <img class="w-full mt-10 mb-10" src="../img/gtm-versions.png" alt="Screenshot of GTM Versions Panel in the Dashboard" />
+
+        <p>
+          <strong>Admin:</strong> contains of the settings and configuration for the container. The GTM installation code is found here as well. 
+        </p>
+        <img class="w-full mt-10 mb-10" src="../img/gtm-admin.png" alt="Screenshot of GTM Versions Panel in the Dashboard" />
+      </div>
+    </div>
+  </section>
+  <section class="bg-white border-b py-8">
+    <div class="container px-5 mx-auto flex flex-wrap justify-center pt-4 pb-12">
+      <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+        Tags, Triggers and Variables
+      </h2>
+      <div class="w-full mb-4">
+        <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+      </div>
+      <div class="slim-content">
+        <p>
+          The GTM container loads first on all page visits; then any subsequent tags are fired according to its conditions.
+        </p>
+
+        <p>GTM is made up of Tags, Triggers and Variables:</p>
+        <ul class="mb-10">
+          <li><strong>Tags</strong> are tracking codes that you want to activate under certain circumstances.</li>
+          <li><strong>Triggers</strong> are the conditions that define when a tag should fire.</li>
+          <li><strong>Variables</strong> are stored information that you can use in your setup or small helper functions.</li>
+        </ul>
+
+        <p>3 good questions to ask yourself when setting up a new tag:</p>
+        <ul class="mb-10">
+          <li>What do you want GTM to do? - <strong>Tag</strong></li>
+          <li>When do you want to do it? - <strong>Trigger</strong></li>
+          <li>What/when/how exactly? – <strong>Variable</strong></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!--Footer-->
+  <footer class="bg-white">
+    <div class="container mx-auto px-8">
+      <div class="w-full flex flex-col md:flex-row py-6">
+        <div class="flex-1 mb-6 text-black">
+          <a class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="/fun-with-ga4-gtm">
+            <img class="w-28" src="../img/yalo-logo-outline.png" />
+          </a>
         </div>
-        <div class="slim-content">
-          <p>Today I’ll be going over the new Google analytics 4 tag and custom tagging with google tag manager.</p>
-          <p>I’ll stick with the more technical side of installing and set up at first. Then we’ll get into the analytics reporting and go over some upgrades and changes with the GA4 dashboard.</p>
+        <div class="flex-1">
+          <p class="uppercase text-gray-500 md:mb-6">Links</p>
+          <ul class="list-reset mb-6">
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="/resources" class="no-underline hover:underline text-gray-800 ">Resource List</a>
+            </li>
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="https://support.google.com/analytics/answer/10089681" class="no-underline hover:underline text-gray-800 ">GA4 Docs</a>
+            </li>
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="https://developers.google.com/analytics/devguides/collection/ga4/tag-options" class="no-underline hover:underline text-gray-800 ">GTM Docs</a>
+            </li>
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="https://developers.google.com/search/docs/monitor-debug/search-console-start" class="no-underline hover:underline text-gray-800 ">Google Search Console</a>
+            </li>
+          </ul>
+        </div>
+        <div class="flex-1">
+          <p class="uppercase text-gray-500 md:mb-6">Digital Yalo</p>
+          <ul class="list-reset mb-6">
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="https://digitalyalo.com/voices/" class="no-underline hover:underline text-gray-800 ">Blog</a>
+            </li>
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="https://digitalyalo.com/our-tribe/" class="no-underline hover:underline text-gray-800 ">About Us</a>
+            </li>
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="https://digitalyalo.com/contact/" class="no-underline hover:underline text-gray-800 ">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="flex-1">
+          <p class="uppercase text-gray-500 md:mb-6">Social</p>
+          <ul class="list-reset mb-6">
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="https://www.facebook.com/digitalyalo" class="no-underline hover:underline text-gray-800 ">Facebook</a>
+            </li>
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="https://www.instagram.com/digitalyalo/?igshid=1ouz9ul8ircne" class="no-underline hover:underline text-gray-800 ">Instagram</a>
+            </li>
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="https://twitter.com/digitalyalo" class="no-underline hover:underline text-gray-800 ">Twitter</a>
+            </li>
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="https://www.linkedin.com/company/digital-yalo/mycompany/" class="no-underline hover:underline text-gray-800 ">Linkedin</a>
+            </li>
+          </ul>
         </div>
       </div>
-    </section>
-    <section class="bg-white border-b py-8">
-      <div class="container px-5 mx-auto flex flex-wrap justify-center pt-4 pb-12">
-        <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-          What is GA4 & GTM?
-        </h2>
-        <div class="w-full mb-4">
-          <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
-        </div>
-        <div class="slim-content">
-          <p>
-            You'll be hearing GA4 and GTM a lot during this presentation so I'll start with explaining what these are in case anyone has never heard these terms.
-          </p>
-          <p>
-            <strong>GA4</strong> is the new Google Analytics property. Google will be sunsetting the previous Universal Analytics property on July 23, 2023. This conversion to the GA4 tag is necessary because Universal Analytics will stop collecting data on that date on will only store existing for a few months. The new analytics is a entirely different dashboard and property in the Google Analytics account.
-          </p>
-          <p>
-            <strong>GTM</strong> is the Google Tag Manager. This Google product has the ability to create custom tags for tracking custom metrics that GA doesn't track by default. The new GA4 tag has a lot more built in events but sometimes custom tags are necessary to track things like individual button clicks, specific link clicks and form submissions.
-          </p>
-        </div>
-      </div>
-    </section>
-    <section class="bg-white border-b py-8">
-      <div class="container px-5 mx-auto flex flex-wrap justify-center pt-4 pb-12">
-        <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-          Enhancements
-        </h2>
-        <div class="w-full mb-4">
-          <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
-        </div>
-        <div class="slim-content">
-          <p>
-            Google Analytics 4 is bringing a new, forward thinking approach to collecting data. User privacy is increasingly important, and tracking user behavior accross the web has become a chjallenge for digital marketers and website owners. That is why GA4 was made with the intent to simplify reporting. GA4 reporting uses advanced machine learning to create a single user story that can be interpreted by digital markets and website owners alike. The platform includes and easy-to-read dashboard, pre-built reports and custom reporting capabilities so you can view the data you care about the most.
-          </p>
-        </div>
-      </div>
-    </section>
-    <!--Footer-->
-    <footer class="bg-white">
-      <div class="container mx-auto px-8">
-        <div class="w-full flex flex-col md:flex-row py-6">
-          <div class="flex-1 mb-6 text-black">
-            <a class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="/fun-with-ga4-gtm">
-              <img class="w-28" src="../img/yalo-logo-outline.png" />
-            </a>
-          </div>
-          <div class="flex-1">
-            <p class="uppercase text-gray-500 md:mb-6">Links</p>
-            <ul class="list-reset mb-6">
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="/resources" class="no-underline hover:underline text-gray-800 ">Resource List</a>
-              </li>
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="https://support.google.com/analytics/answer/10089681" class="no-underline hover:underline text-gray-800 ">GA4 Docs</a>
-              </li>
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="https://developers.google.com/analytics/devguides/collection/ga4/tag-options" class="no-underline hover:underline text-gray-800 ">GTM Docs</a>
-              </li>
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="https://developers.google.com/search/docs/monitor-debug/search-console-start" class="no-underline hover:underline text-gray-800 ">Google Search Console</a>
-              </li>
-            </ul>
-          </div>
-          <div class="flex-1">
-            <p class="uppercase text-gray-500 md:mb-6">Digital Yalo</p>
-            <ul class="list-reset mb-6">
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="https://digitalyalo.com/voices/" class="no-underline hover:underline text-gray-800 ">Blog</a>
-              </li>
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="https://digitalyalo.com/our-tribe/" class="no-underline hover:underline text-gray-800 ">About Us</a>
-              </li>
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="https://digitalyalo.com/contact/" class="no-underline hover:underline text-gray-800 ">Contact</a>
-              </li>
-            </ul>
-          </div>
-          <div class="flex-1">
-            <p class="uppercase text-gray-500 md:mb-6">Social</p>
-            <ul class="list-reset mb-6">
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="https://www.facebook.com/digitalyalo" class="no-underline hover:underline text-gray-800 ">Facebook</a>
-              </li>
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="https://www.instagram.com/digitalyalo/?igshid=1ouz9ul8ircne" class="no-underline hover:underline text-gray-800 ">Instagram</a>
-              </li>
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="https://twitter.com/digitalyalo" class="no-underline hover:underline text-gray-800 ">Twitter</a>
-              </li>
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="https://www.linkedin.com/company/digital-yalo/mycompany/" class="no-underline hover:underline text-gray-800 ">Linkedin</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </footer>
+    </div>
+  </footer>
 
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
  
